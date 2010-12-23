@@ -1,0 +1,2 @@
+  # cat=basic/enable; type=text; label=url zu solr server (example: http://solr-test.de:8080)
+solrurl = 
