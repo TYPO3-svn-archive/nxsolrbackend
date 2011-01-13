@@ -29,8 +29,8 @@
  *
  * @package Nxsolrbackend
  * @subpackage Persistence\QOM
- * @version $Id$
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
+ * @access private
  */
 class Tx_Nxsolrbackend_Persistence_QOM_ExclusiveRange extends Tx_Nxsolrbackend_Persistence_QOM_Range {
 }

@@ -23,11 +23,12 @@
 ***************************************************************/
 
 /**
+ * Configuration object that is used to configure the facets that should be returned by a query
  *
- *
- * @package Extbase
+ * @package Nxsolrbackend
  * @subpackage Persistence
- * @version $Id$
+ * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
+ * @api
  */
 class Tx_Nxsolrbackend_Persistence_FacetConfiguration {
 
@@ -90,6 +91,7 @@ class Tx_Nxsolrbackend_Persistence_FacetConfiguration {
 	 * Sets the fields to facet on. Corresponds to the facet.field parameter.
 	 *
 	 * @param array $fields
+	 * @api
 	 */
 	public function setFields($fields) {
 		$this->fields = $fields;
@@ -108,6 +110,7 @@ class Tx_Nxsolrbackend_Persistence_FacetConfiguration {
 	 * Set the sorting order of facets. Can be either "count" or "lex". Corresponds to the facet.sort parameter.
 	 *
 	 * @param string $sortingType
+	 * @api
 	 */
 	public function setSortingType($sortingType) {
 		$this->sort = $sortingType;
@@ -128,6 +131,7 @@ class Tx_Nxsolrbackend_Persistence_FacetConfiguration {
 	 * Corresponds to facet.limit parameter.
 	 *
 	 * @param integer $limit
+	 * @api
 	 */
 	public function setLimit($limit) {
 		$this->limit = $limit;
@@ -146,6 +150,7 @@ class Tx_Nxsolrbackend_Persistence_FacetConfiguration {
 	 * Corresponds to facet.offset parameter.
 	 *
 	 * @param integer $offset
+	 * @api
 	 */
 	public function setOffset($offset) {
 		$this->offset = $offset;
@@ -165,6 +170,7 @@ class Tx_Nxsolrbackend_Persistence_FacetConfiguration {
 	 * Corresponds to facet.mincount parameter.
 	 *
 	 * @param integer $minCount
+	 * @api
 	 */
 	public function setMinCount($minCount) {
 		$this->minCount = $minCount;
@@ -184,7 +190,8 @@ class Tx_Nxsolrbackend_Persistence_FacetConfiguration {
 	 * Set whether to add the count of all results not matching any value. Defaults to FALSE.
 	 * Corresponds to facet.missing parameter
 	 *
-	 * @param boolean $showMissing
+	 * @param boolean $countMissing
+	 * @api
 	 */
 	public function setCountMissing($countMissing) {
 		$this->missing = $countMissing;
@@ -196,7 +203,7 @@ class Tx_Nxsolrbackend_Persistence_FacetConfiguration {
 	 *
 	 * @return string
 	 */
-	public function getPrefix() {
+	public function getFilterPrefix() {
 		return $this->prefix;
 	}
 	
@@ -205,6 +212,7 @@ class Tx_Nxsolrbackend_Persistence_FacetConfiguration {
 	 * Corresponds to facet.prefix parameter
 	 *
 	 * @param string $prefix
+	 * @api
 	 */
 	public function setFilterPrefix($prefix) {
 		$this->prefix = $prefix;
@@ -224,6 +232,7 @@ class Tx_Nxsolrbackend_Persistence_FacetConfiguration {
 	 * Corresponds to facet.method parameter
 	 *
 	 * @param string $method
+	 * @api
 	 */
 	public function setMethod($method) {
 		$this->method = $method;
@@ -242,6 +251,7 @@ class Tx_Nxsolrbackend_Persistence_FacetConfiguration {
 	 * Set the queries to facet on. Corresponds to facet.query parameter.
 	 *
 	 * @param array $queries
+	 * @api
 	 */
 	public function setQueries($queries) {
 		$this->queries  = $queries;

@@ -27,15 +27,17 @@
  *
  * @package Nxsolrbackend
  * @subpackage Persistence
- * @version $Id$
+ * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
+ * @api
  */
-class Tx_Nxsolrbackend_Persistence_QueryFactory extends Tx_Extbase_Persistence_QueryFactory { //implements Tx_Extbase_Persistence_QueryFactoryInterface, t3lib_Singleton {
+class Tx_Nxsolrbackend_Persistence_QueryFactory extends Tx_Extbase_Persistence_QueryFactory {
 
 	/**
 	 * Creates a query object working on the given class name
 	 *
 	 * @param string $className The class name
-	 * @return Tx_Extbase_Persistence_QueryInterface
+	 * @return Tx_Nxsolrbackend_Persistence_QueryInterface
+	 * @api
 	 */
 	public function create($className) {
 		$query = $this->objectManager->create('Tx_Nxsolrbackend_Persistence_Query', $className);

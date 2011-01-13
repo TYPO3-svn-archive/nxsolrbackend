@@ -25,9 +25,9 @@
 /**
  * A Storage backend that dynamically decides which storage backend to actually use for a node type
  *
- * @package nxsolrbackend
+ * @package Nxsolrbackend
  * @subpackage Persistence\Storage
- * @version $Id$
+ * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
 class Tx_Nxsolrbackend_Persistence_Storage_ProxyBackend implements Tx_Extbase_Persistence_Storage_BackendInterface, t3lib_Singleton {
 

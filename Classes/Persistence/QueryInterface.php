@@ -25,11 +25,12 @@
 ***************************************************************/
 
 /**
+ * A query object that provides additional functionallity to provide a facet configuration
  *
- *
- * @version $Id$
- * @copyright Copyright belongs to the respective authors
+ * @package Nxsolrbackend
+ * @subpackage Persistence
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
+ * @api
  */
 interface Tx_Nxsolrbackend_Persistence_QueryInterface extends Tx_Extbase_Persistence_QueryInterface {
 
@@ -44,6 +45,7 @@ interface Tx_Nxsolrbackend_Persistence_QueryInterface extends Tx_Extbase_Persist
 	 * Sets additional facet configuration
 	 *
 	 * @param Tx_Nxsolrbackend_Persistence_FacetConfiguration $facetConfiguration
+	 * @api
 	 */
 	public function setFacetConfiguration(Tx_Nxsolrbackend_Persistence_FacetConfiguration $facetConfiguration);
 	
@@ -53,7 +55,8 @@ interface Tx_Nxsolrbackend_Persistence_QueryInterface extends Tx_Extbase_Persist
 	 * @param string $propertyName
 	 * @param mixed $lowerBound
 	 * @param mixed $upperBound
-	 * @return Tx_Nxsolrbackend_Persistence_QOM_RangeInterface
+	 * @return Tx_Extbase_Persistence_QOM_ConstraintInterface
+	 * @api
 	 */
 	public function inRangeInclusive($propertyName, $lowerBound, $upperBound);
 	
@@ -63,7 +66,8 @@ interface Tx_Nxsolrbackend_Persistence_QueryInterface extends Tx_Extbase_Persist
 	 * @param string $propertyName
 	 * @param mixed $lowerBound
 	 * @param mixed $upperBound
-	 * @return Tx_Nxsolrbackend_Persistence_QOM_RangeInterface
+	 * @return Tx_Extbase_Persistence_QOM_ConstraintInterface
+	 * @api
 	 */
 	public function inRangeExclusive($propertyName, $lowerBound, $upperBound);
 	

@@ -23,8 +23,11 @@
 ***************************************************************/
 
 /**
+ * Contains the facet data of a query with facet configuration
  *
- *
+ * @package Nxsolrbackend
+ * @subpackage Persistence
+ * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
 class Tx_Nxsolrbackend_Persistence_FacetResult implements Tx_Nxsolrbackend_Persistence_FacetResultInterface {
 	

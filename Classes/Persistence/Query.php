@@ -25,10 +25,10 @@
 ***************************************************************/
 
 /**
+ * A query object that provides additional functionallity to provide a facet configuration
  *
- *
- * @version $Id$
- * @copyright Copyright belongs to the respective authors
+ * @package Nxsolrbackend
+ * @subpackage Persistence
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  */
 class Tx_Nxsolrbackend_Persistence_Query extends Tx_Extbase_Persistence_Query implements Tx_Nxsolrbackend_Persistence_QueryInterface {

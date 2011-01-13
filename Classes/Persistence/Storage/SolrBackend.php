@@ -25,9 +25,10 @@
 /**
  * A Storage backend
  *
- * @package nxsolrbackend
+ * @package Nxsolrbackend
  * @subpackage Persistence\Storage
- * @version $Id$
+ * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
+ * @access private
  */
 class Tx_Nxsolrbackend_Persistence_Storage_SolrBackend implements Tx_Nxsolrbackend_Persistence_Storage_SolrBackendInterface, t3lib_Singleton {
 
@@ -246,7 +247,7 @@ class Tx_Nxsolrbackend_Persistence_Storage_SolrBackend implements Tx_Nxsolrbacke
 		$this->parseLimitAndOffset($query->getLimit(), $query->getOffset(), $statementParts);
 		
 		if($query instanceof Tx_Nxsolrbackend_Persistence_QueryInterface && $query->getFacetConfiguration() !== NULL) {
-			$this->parseFacet($query, $statementParts);
+			$this->parseFacet($query->getFacetConfiguration(), $statementParts);
 		}
 		
 		return $statementParts;
@@ -255,13 +256,11 @@ class Tx_Nxsolrbackend_Persistence_Storage_SolrBackend implements Tx_Nxsolrbacke
 	/**
 	 * Transforms a Query Facet into solr statement parts
 	 *
-	 * @param Tx_Nxsolrbackend_Persistence_QueryInterface $query
+	 * @param Tx_Nxsolrbackend_Persistence_FacetConfiguration $facetConfiguration
 	 * @param array $statementParts
 	 * @return void
 	 */
-	protected function parseFacet(Tx_Nxsolrbackend_Persistence_QueryInterface $query, array &$statementParts) {
-		$facetConfiguration = $query->getFacetConfiguration();
-		
+	protected function parseFacet(Tx_Nxsolrbackend_Persistence_FacetConfiguration $facetConfiguration, array &$statementParts) {
 		$statementParts['facet'][] = 'facet=on';
 		
 		$facetFields = $facetConfiguration->getFields();
@@ -288,8 +287,8 @@ class Tx_Nxsolrbackend_Persistence_Storage_SolrBackend implements Tx_Nxsolrbacke
 			if ($facetConfiguration->getCountMissing()) {
 				$statementParts['facet'][] = 'facet.missing=true';
 			}
-			if ($facetConfiguration->getPrefix() !== NULL) {
-				$statementParts['facet'][] = 'facet.prefix=' . urlencode($facetConfiguration->getPrefix());
+			if ($facetConfiguration->getFilterPrefix() !== NULL) {
+				$statementParts['facet'][] = 'facet.prefix=' . urlencode($facetConfiguration->getFilterPrefix());
 			}
 			if ($facetConfiguration->getMethod() !== NULL) {
 				if ($facetConfiguration->getMethod() !== 'enum' && $facetConfiguration->getMethod() !== 'fc') {
@@ -477,13 +476,13 @@ class Tx_Nxsolrbackend_Persistence_Storage_SolrBackend implements Tx_Nxsolrbacke
 				throw new Tx_Nxsolrbackend_Persistence_Storage_Exception_UnimplementedFeature('Operator not eqaul not supported. Use conjuntion of not and equals operator instead.', 1293113922);
 				break;
 			case Tx_Extbase_Persistence_QueryInterface::OPERATOR_LESS_THAN:
-				$operator = urlencode('[* TO ').'?]';
+				$operator = urlencode('{* TO ').'?}';
 				break;
 			case Tx_Extbase_Persistence_QueryInterface::OPERATOR_LESS_THAN_OR_EQUAL_TO:
 				$operator = urlencode('[* TO ').'?]';
 				break;
 			case Tx_Extbase_Persistence_QueryInterface::OPERATOR_GREATER_THAN:
-				$operator = '[?' . urlencode(' TO *]');
+				$operator = '{?' . urlencode(' TO *}');
 				break;
 			case Tx_Extbase_Persistence_QueryInterface::OPERATOR_GREATER_THAN_OR_EQUAL_TO:
 				$operator = '[?' . urlencode(' TO *]');
@@ -630,13 +629,6 @@ class Tx_Nxsolrbackend_Persistence_Storage_SolrBackend implements Tx_Nxsolrbacke
 			),
 			$parameter
 		);
-		
-		$parameter = str_replace('(', '\(', $parameter);
-		$parameter = str_replace(')', '\)', $parameter);
-		$parameter = str_replace(' ', '\ ', $parameter);
-		$parameter = str_replace(':', '\:', $parameter);
-		$parameter = str_replace('\ TO\ ', ' TO ', $parameter);
-		return $parameter;
 	}
 	
 }

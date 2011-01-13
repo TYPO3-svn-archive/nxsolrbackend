@@ -26,7 +26,9 @@
 /**
  * An invalid method was configured for a facet
  *
- * @version $ID:$
+ * @package Nxsolrbackend
+ * @subpackage Persistence\Storage\Exception
+ * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
 class Tx_Nxsolrbackend_Persistence_Storage_Exception_InvalidMethod extends Tx_Nxsolrbackend_Persistence_Storage_Exception {
 }

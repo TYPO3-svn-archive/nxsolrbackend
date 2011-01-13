@@ -1,5 +1,4 @@
 <?php
-
 /***************************************************************
 *  Copyright notice
 *
@@ -25,10 +24,10 @@
 ***************************************************************/
 
 /**
+ * Stores the results of a query
  *
- *
- * @version $Id$
- * @copyright Copyright belongs to the respective authors
+ * @package Nxsolrbackend
+ * @subpackage Persistence
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  */
 class Tx_Nxsolrbackend_Persistence_QueryResult extends Tx_Extbase_Persistence_QueryResult implements Tx_Nxsolrbackend_Persistence_QueryResultInterface {
@@ -80,6 +79,9 @@ class Tx_Nxsolrbackend_Persistence_QueryResult extends Tx_Extbase_Persistence_Qu
 		$this->storageBackend = $storageBackend;
 	}
 	
+	/**
+	 * Load the query result from the Solr server and prepare the returned data
+	 */
 	protected function initialize() {
 		if (!is_array($this->queryResult)) {
 			$objectAndFacetData = $this->storageBackend->getObjectAndFacetDataByQuery($this->query);
@@ -96,7 +98,7 @@ class Tx_Nxsolrbackend_Persistence_QueryResult extends Tx_Extbase_Persistence_Qu
 	/**
 	 * Returns the additional facetObject, if exists
 	 *
-	 * @return Tx_Extbase_Persistence_FacetObject facetObject
+	 * @return Tx_Nxsolrbackend_Persistence_FacetResultInterface
 	 */
 	public function getFacetResult() {
 		$this->initialize();
@@ -122,6 +124,12 @@ class Tx_Nxsolrbackend_Persistence_QueryResult extends Tx_Extbase_Persistence_Qu
 		} else {
 			return parent::count();
 		}
+	}
+	
+	public function __wakeup() {
+		parent::__wakeup();
+		$this->objectManager = t3lib_div::makeInstance('Tx_Extbase_Object_ObjectManager');
+		$this->storageBackend = $this->objectManager->get('Tx_Nxsolrbackend_Persistence_Storage_SolrBackendInterface');
 	}
 }
 ?>

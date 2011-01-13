@@ -23,8 +23,12 @@
 ***************************************************************/
 
 /**
+ * Stores and processes facet data that is contained in the result of a query with a facet configured
  *
- *
+ * @package Nxsolrbackend
+ * @subpackage Persistence
+ * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
+ * @api
  */
 interface Tx_Nxsolrbackend_Persistence_FacetResultInterface {
 	
@@ -39,6 +43,7 @@ interface Tx_Nxsolrbackend_Persistence_FacetResultInterface {
 	 * Returns the result
 	 *
 	 * @return array $result
+	 * @api
 	 */
 	public function getResult();
 }

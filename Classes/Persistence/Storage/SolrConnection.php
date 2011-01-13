@@ -28,7 +28,9 @@
  *
  * @package Nxsolrbackend
  * @subpackage Persistence\Storage
-  */
+ * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
+ * @access private
+ */
 class Tx_Nxsolrbackend_Persistence_Storage_SolrConnection implements t3lib_Singleton {
 
 	/**

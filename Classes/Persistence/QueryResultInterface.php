@@ -25,11 +25,12 @@
 ***************************************************************/
 
 /**
+ * Stores the results of a query
  *
- *
- * @version $Id$
- * @copyright Copyright belongs to the respective authors
+ * @package Nxsolrbackend
+ * @subpackage Persistence
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
+ * @api
  */
 interface Tx_Nxsolrbackend_Persistence_QueryResultInterface extends Tx_Extbase_Persistence_QueryResultInterface {
 	
@@ -37,7 +38,8 @@ interface Tx_Nxsolrbackend_Persistence_QueryResultInterface extends Tx_Extbase_P
 	/**
 	 * Returns the facet result if applicable.
 	 *
-	 * @return Tx_Extbase_Persistence_FacetObject facetObject
+	 * @return Tx_Nxsolrbackend_Persistence_FacetResultInterface
+	 * @api
 	 */
 	public function getFacetResult();
 
@@ -45,6 +47,7 @@ interface Tx_Nxsolrbackend_Persistence_QueryResultInterface extends Tx_Extbase_P
 	 * Check whether the query result contains additional facet information
 	 *
 	 * @return boolean
+	 * @api
 	 */
 	public function hasFacet();
 

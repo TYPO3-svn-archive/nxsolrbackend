@@ -25,9 +25,10 @@
 /**
  * A Storage backend
  *
- * @package nxsolrbackend
+ * @package Nxsolrbackend
  * @subpackage Persistence\Storage
- * @version $Id$
+ * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
+ * @access private
  */
 interface Tx_Nxsolrbackend_Persistence_Storage_SolrBackendInterface extends Tx_Extbase_Persistence_Storage_BackendInterface {
 
