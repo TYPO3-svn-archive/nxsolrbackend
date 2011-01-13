@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>phpDocumentor Parser Errors and Warnings</title>
+			<link rel="stylesheet" href="media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+						<a href="#Post-parsing">Post-parsing</a><br>
+<a href="#Backend.php">Backend.php</a><br>
+<a href="#BackendInterface.php">BackendInterface.php</a><br>
+<a href="#BadConstraint.php">BadConstraint.php</a><br>
+<a href="#BindVariableValue.php">BindVariableValue.php</a><br>
+<a href="#BindVariableValueInterface.php">BindVariableValueInterface.php</a><br>
+<a href="#CleanStateNotMemorized.php">CleanStateNotMemorized.php</a><br>
+<a href="#ColumnMap.php">ColumnMap.php</a><br>
+<a href="#Comparison.php">Comparison.php</a><br>
+<a href="#ComparisonInterface.php">ComparisonInterface.php</a><br>
+<a href="#Constraint.php">Constraint.php</a><br>
+<a href="#ConstraintInterface.php">ConstraintInterface.php</a><br>
+<a href="#DataMap.php">DataMap.php</a><br>
+<a href="#DataMapFactory.php">DataMapFactory.php</a><br>
+<a href="#DataMapper.php">DataMapper.php</a><br>
+<a href="#DynamicOperand.php">DynamicOperand.php</a><br>
+<a href="#DynamicOperandInterface.php">DynamicOperandInterface.php</a><br>
+<a href="#EquiJoinCondition.php">EquiJoinCondition.php</a><br>
+<a href="#EquiJoinConditionInterface.php">EquiJoinConditionInterface.php</a><br>
+<a href="#Exception.php">Exception.php</a><br>
+<a href="#ExclusiveRange.php">ExclusiveRange.php</a><br>
+<a href="#FacetConfiguration.php">FacetConfiguration.php</a><br>
+<a href="#FacetResult.php">FacetResult.php</a><br>
+<a href="#FacetResultInterface.php">FacetResultInterface.php</a><br>
+<a href="#IdentityMap.php">IdentityMap.php</a><br>
+<a href="#IllegalObjectType.php">IllegalObjectType.php</a><br>
+<a href="#InclusiveRange.php">InclusiveRange.php</a><br>
+<a href="#InvalidClass.php">InvalidClass.php</a><br>
+<a href="#InvalidMethod.php">InvalidMethod.php</a><br>
+<a href="#InvalidNumberOfConstraints.php">InvalidNumberOfConstraints.php</a><br>
+<a href="#InvalidPropertyType.php">InvalidPropertyType.php</a><br>
+<a href="#InvalidSortingType.php">InvalidSortingType.php</a><br>
+<a href="#Join.php">Join.php</a><br>
+<a href="#JoinConditionInterface.php">JoinConditionInterface.php</a><br>
+<a href="#JoinInterface.php">JoinInterface.php</a><br>
+<a href="#LazyLoadingProxy.php">LazyLoadingProxy.php</a><br>
+<a href="#LazyObjectStorage.php">LazyObjectStorage.php</a><br>
+<a href="#LoadingStrategyInterface.php">LoadingStrategyInterface.php</a><br>
+<a href="#LogicalAnd.php">LogicalAnd.php</a><br>
+<a href="#LogicalNot.php">LogicalNot.php</a><br>
+<a href="#LogicalOr.php">LogicalOr.php</a><br>
+<a href="#LowerCase.php">LowerCase.php</a><br>
+<a href="#LowerCaseInterface.php">LowerCaseInterface.php</a><br>
+<a href="#Manager.php">Manager.php</a><br>
+<a href="#ManagerInterface.php">ManagerInterface.php</a><br>
+<a href="#MissingBackend.php">MissingBackend.php</a><br>
+<a href="#NotInterface.php">NotInterface.php</a><br>
+<a href="#ObjectMonitoringInterface.php">ObjectMonitoringInterface.php</a><br>
+<a href="#ObjectStorage.php">ObjectStorage.php</a><br>
+<a href="#Operand.php">Operand.php</a><br>
+<a href="#OperandInterface.php">OperandInterface.php</a><br>
+<a href="#Ordering.php">Ordering.php</a><br>
+<a href="#OrderingInterface.php">OrderingInterface.php</a><br>
+<a href="#OrInterface.php">OrInterface.php</a><br>
+<a href="#PropertyType.php">PropertyType.php</a><br>
+<a href="#PropertyValue.php">PropertyValue.php</a><br>
+<a href="#PropertyValueInterface.php">PropertyValueInterface.php</a><br>
+<a href="#ProxyBackend.php">ProxyBackend.php</a><br>
+<a href="#Query.php">Query.php</a><br>
+<a href="#QueryFactory.php">QueryFactory.php</a><br>
+<a href="#QueryFactoryInterface.php">QueryFactoryInterface.php</a><br>
+<a href="#QueryInterface.php">QueryInterface.php</a><br>
+<a href="#QueryObjectModel.php">QueryObjectModel.php</a><br>
+<a href="#QueryObjectModelConstantsInterface.php">QueryObjectModelConstantsInterface.php</a><br>
+<a href="#QueryObjectModelFactory.php">QueryObjectModelFactory.php</a><br>
+<a href="#QueryObjectModelFactoryInterface.php">QueryObjectModelFactoryInterface.php</a><br>
+<a href="#QueryResult.php">QueryResult.php</a><br>
+<a href="#QueryResultInterface.php">QueryResultInterface.php</a><br>
+<a href="#QuerySettingsInterface.php">QuerySettingsInterface.php</a><br>
+<a href="#Range.php">Range.php</a><br>
+<a href="#RangeInterface.php">RangeInterface.php</a><br>
+<a href="#Repository.php">Repository.php</a><br>
+<a href="#RepositoryException.php">RepositoryException.php</a><br>
+<a href="#RepositoryInterface.php">RepositoryInterface.php</a><br>
+<a href="#Selector.php">Selector.php</a><br>
+<a href="#SelectorInterface.php">SelectorInterface.php</a><br>
+<a href="#Session.php">Session.php</a><br>
+<a href="#SolrBackend.php">SolrBackend.php</a><br>
+<a href="#SolrBackendInterface.php">SolrBackendInterface.php</a><br>
+<a href="#SolrConnection.php">SolrConnection.php</a><br>
+<a href="#SourceInterface.php">SourceInterface.php</a><br>
+<a href="#SqlError.php">SqlError.php</a><br>
+<a href="#Statement.php">Statement.php</a><br>
+<a href="#StaticOperand.php">StaticOperand.php</a><br>
+<a href="#StaticOperandInterface.php">StaticOperandInterface.php</a><br>
+<a href="#TooDirty.php">TooDirty.php</a><br>
+<a href="#Typo3DbBackend.php">Typo3DbBackend.php</a><br>
+<a href="#Typo3QuerySettings.php">Typo3QuerySettings.php</a><br>
+<a href="#UnexpectedTypeException.php">UnexpectedTypeException.php</a><br>
+<a href="#UnimplementedFeature.php">UnimplementedFeature.php</a><br>
+<a href="#UnknownObject.php">UnknownObject.php</a><br>
+<a href="#UnsupportedMethod.php">UnsupportedMethod.php</a><br>
+<a href="#UnsupportedOrder.php">UnsupportedOrder.php</a><br>
+<a href="#UnsupportedRelation.php">UnsupportedRelation.php</a><br>
+<a href="#UpperCase.php">UpperCase.php</a><br>
+<a href="#UpperCaseInterface.php">UpperCaseInterface.php</a><br>
+<a name="AndInterface.php"></a>
+<h1>AndInterface.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 37</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/QOM/AndInterface.php<br>
+<a name="Backend.php"></a>
+<h1>Backend.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 35</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/Backend.php<br>
+<a name="BackendInterface.php"></a>
+<h1>BackendInterface.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 34</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/BackendInterface.php<br>
+<b>Warning on line 34</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/Storage/BackendInterface.php<br>
+<a name="BadConstraint.php"></a>
+<h1>BadConstraint.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 34</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/Storage/Exception/BadConstraint.php<br>
+<a name="BindVariableValue.php"></a>
+<h1>BindVariableValue.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 35</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/QOM/BindVariableValue.php<br>
+<b>Warning on line 35</b> - Unknown tag "@scope" used<br>
+<a name="BindVariableValueInterface.php"></a>
+<h1>BindVariableValueInterface.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 35</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/QOM/BindVariableValueInterface.php<br>
+<a name="CleanStateNotMemorized.php"></a>
+<h1>CleanStateNotMemorized.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 34</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/Exception/CleanStateNotMemorized.php<br>
+<a name="ColumnMap.php"></a>
+<h1>ColumnMap.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 32</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/Mapper/ColumnMap.php<br>
+<a name="Comparison.php"></a>
+<h1>Comparison.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 75</b> - Unknown tag "@scope" used<br>
+<b>Warning on line 75</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/QOM/Comparison.php<br>
+<a name="ComparisonInterface.php"></a>
+<h1>ComparisonInterface.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 75</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/QOM/ComparisonInterface.php<br>
+<a name="Constraint.php"></a>
+<h1>Constraint.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 34</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/QOM/Constraint.php<br>
+<b>Warning on line 34</b> - no @package tag was used in a DocBlock for class Tx_Extbase_Persistence_QOM_Constraint<br>
+<b>Warning on line 34</b> - Unknown tag "@scope" used<br>
+<a name="ConstraintInterface.php"></a>
+<h1>ConstraintInterface.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 37</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/QOM/ConstraintInterface.php<br>
+<a name="DataMap.php"></a>
+<h1>DataMap.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 31</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/Mapper/DataMap.php<br>
+<a name="DataMapFactory.php"></a>
+<h1>DataMapFactory.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 31</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/Mapper/DataMapFactory.php<br>
+<a name="DataMapper.php"></a>
+<h1>DataMapper.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 31</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/Mapper/DataMapper.php<br>
+<a name="DynamicOperand.php"></a>
+<h1>DynamicOperand.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 35</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/QOM/DynamicOperand.php<br>
+<b>Warning on line 35</b> - Unknown tag "@scope" used<br>
+<a name="DynamicOperandInterface.php"></a>
+<h1>DynamicOperandInterface.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 34</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/QOM/DynamicOperandInterface.php<br>
+<a name="EquiJoinCondition.php"></a>
+<h1>EquiJoinCondition.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 39</b> - Unknown tag "@scope" used<br>
+<b>Warning on line 39</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/QOM/EquiJoinCondition.php<br>
+<a name="EquiJoinConditionInterface.php"></a>
+<h1>EquiJoinConditionInterface.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 38</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/QOM/EquiJoinConditionInterface.php<br>
+<a name="Exception.php"></a>
+<h1>Exception.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 32</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/nxsolrbackend/Classes/Persistence/Storage/Exception.php<br>
+<b>Warning on line 34</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/Exception.php<br>
+<a name="ExclusiveRange.php"></a>
+<h1>ExclusiveRange.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 34</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/nxsolrbackend/Classes/Persistence/QOM/ExclusiveRange.php<br>
+<a name="FacetConfiguration.php"></a>
+<h1>FacetConfiguration.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 32</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/nxsolrbackend/Classes/Persistence/FacetConfiguration.php<br>
+<a name="FacetResult.php"></a>
+<h1>FacetResult.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 31</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/nxsolrbackend/Classes/Persistence/FacetResult.php<br>
+<a name="FacetResultInterface.php"></a>
+<h1>FacetResultInterface.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 32</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/nxsolrbackend/Classes/Persistence/FacetResultInterface.php<br>
+<a name="IdentityMap.php"></a>
+<h1>IdentityMap.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 34</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/IdentityMap.php<br>
+<b>Warning on line 34</b> - no @package tag was used in a DocBlock for class Tx_Extbase_Persistence_IdentityMap<br>
+<a name="IllegalObjectType.php"></a>
+<h1>IllegalObjectType.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 34</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/Exception/IllegalObjectType.php<br>
+<a name="InclusiveRange.php"></a>
+<h1>InclusiveRange.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 34</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/nxsolrbackend/Classes/Persistence/QOM/InclusiveRange.php<br>
+<a name="InvalidClass.php"></a>
+<h1>InvalidClass.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 34</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/Exception/InvalidClass.php<br>
+<a name="InvalidMethod.php"></a>
+<h1>InvalidMethod.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 32</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/nxsolrbackend/Classes/Persistence/Storage/Exception/InvalidMethod.php<br>
+<a name="InvalidNumberOfConstraints.php"></a>
+<h1>InvalidNumberOfConstraints.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 34</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/Exception/InvalidNumberOfConstraints.php<br>
+<a name="InvalidPropertyType.php"></a>
+<h1>InvalidPropertyType.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 34</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/Exception/InvalidPropertyType.php<br>
+<a name="InvalidSortingType.php"></a>
+<h1>InvalidSortingType.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 32</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/nxsolrbackend/Classes/Persistence/Storage/Exception/InvalidSortingType.php<br>
+<a name="Join.php"></a>
+<h1>Join.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 35</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/QOM/Join.php<br>
+<b>Warning on line 35</b> - Unknown tag "@scope" used<br>
+<a name="JoinConditionInterface.php"></a>
+<h1>JoinConditionInterface.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 34</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/QOM/JoinConditionInterface.php<br>
+<a name="JoinInterface.php"></a>
+<h1>JoinInterface.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 34</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/QOM/JoinInterface.php<br>
+<a name="LazyLoadingProxy.php"></a>
+<h1>LazyLoadingProxy.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 35</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/LazyLoadingProxy.php<br>
+<a name="LazyObjectStorage.php"></a>
+<h1>LazyObjectStorage.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 35</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/LazyObjectStorage.php<br>
+<a name="LoadingStrategyInterface.php"></a>
+<h1>LoadingStrategyInterface.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 34</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/LoadingStrategyInterface.php<br>
+<a name="LogicalAnd.php"></a>
+<h1>LogicalAnd.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 38</b> - Unknown tag "@scope" used<br>
+<b>Warning on line 38</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/QOM/LogicalAnd.php<br>
+<a name="LogicalNot.php"></a>
+<h1>LogicalNot.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 37</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/QOM/LogicalNot.php<br>
+<b>Warning on line 37</b> - Unknown tag "@scope" used<br>
+<a name="LogicalOr.php"></a>
+<h1>LogicalOr.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 40</b> - Unknown tag "@scope" used<br>
+<b>Warning on line 40</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/QOM/LogicalOr.php<br>
+<a name="LowerCase.php"></a>
+<h1>LowerCase.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 41</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/QOM/LowerCase.php<br>
+<b>Warning on line 41</b> - Unknown tag "@scope" used<br>
+<a name="LowerCaseInterface.php"></a>
+<h1>LowerCaseInterface.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 40</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/QOM/LowerCaseInterface.php<br>
+<a name="Manager.php"></a>
+<h1>Manager.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 35</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/Manager.php<br>
+<a name="ManagerInterface.php"></a>
+<h1>ManagerInterface.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 35</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/ManagerInterface.php<br>
+<a name="MissingBackend.php"></a>
+<h1>MissingBackend.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 34</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/Exception/MissingBackend.php<br>
+<a name="NotInterface.php"></a>
+<h1>NotInterface.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 36</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/QOM/NotInterface.php<br>
+<a name="ObjectMonitoringInterface.php"></a>
+<h1>ObjectMonitoringInterface.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 34</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/ObjectMonitoringInterface.php<br>
+<a name="ObjectStorage.php"></a>
+<h1>ObjectStorage.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 34</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/ObjectStorage.php<br>
+<a name="Operand.php"></a>
+<h1>Operand.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 35</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/QOM/Operand.php<br>
+<b>Warning on line 35</b> - Unknown tag "@scope" used<br>
+<a name="OperandInterface.php"></a>
+<h1>OperandInterface.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 34</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/QOM/OperandInterface.php<br>
+<a name="Ordering.php"></a>
+<h1>Ordering.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 35</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/QOM/Ordering.php<br>
+<a name="OrderingInterface.php"></a>
+<h1>OrderingInterface.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 35</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/QOM/OrderingInterface.php<br>
+<a name="OrInterface.php"></a>
+<h1>OrInterface.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 39</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/QOM/OrInterface.php<br>
+<a name="PropertyType.php"></a>
+<h1>PropertyType.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 48</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/PropertyType.php<br>
+<a name="PropertyValue.php"></a>
+<h1>PropertyValue.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 43</b> - Unknown tag "@scope" used<br>
+<b>Warning on line 43</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/QOM/PropertyValue.php<br>
+<a name="PropertyValueInterface.php"></a>
+<h1>PropertyValueInterface.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 42</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/QOM/PropertyValueInterface.php<br>
+<a name="ProxyBackend.php"></a>
+<h1>ProxyBackend.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 31</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/nxsolrbackend/Classes/Persistence/Storage/ProxyBackend.php<br>
+<a name="Query.php"></a>
+<h1>Query.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 33</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/nxsolrbackend/Classes/Persistence/Query.php<br>
+<b>Warning on line 36</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/Query.php<br>
+<b>Warning on line 36</b> - Unknown tag "@scope" used<br>
+<a name="QueryFactory.php"></a>
+<h1>QueryFactory.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 31</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/QueryFactory.php<br>
+<b>Warning on line 32</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/nxsolrbackend/Classes/Persistence/QueryFactory.php<br>
+<a name="QueryFactoryInterface.php"></a>
+<h1>QueryFactoryInterface.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 34</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/QueryFactoryInterface.php<br>
+<a name="QueryInterface.php"></a>
+<h1>QueryInterface.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 34</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/nxsolrbackend/Classes/Persistence/QueryInterface.php<br>
+<b>Warning on line 35</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/QueryInterface.php<br>
+<a name="QueryObjectModel.php"></a>
+<h1>QueryObjectModel.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 61</b> - Unknown tag "@scope" used<br>
+<b>Warning on line 61</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/QOM/QueryObjectModel.php<br>
+<a name="QueryObjectModelConstantsInterface.php"></a>
+<h1>QueryObjectModelConstantsInterface.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 35</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/QOM/QueryObjectModelConstantsInterface.php<br>
+<a name="QueryObjectModelFactory.php"></a>
+<h1>QueryObjectModelFactory.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 35</b> - Unknown tag "@scope" used<br>
+<b>Warning on line 35</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/QOM/QueryObjectModelFactory.php<br>
+<a name="QueryObjectModelFactoryInterface.php"></a>
+<h1>QueryObjectModelFactoryInterface.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 36</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/QOM/QueryObjectModelFactoryInterface.php<br>
+<a name="QueryResult.php"></a>
+<h1>QueryResult.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 33</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/nxsolrbackend/Classes/Persistence/QueryResult.php<br>
+<b>Warning on line 35</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/QueryResult.php<br>
+<b>Warning on line 35</b> - Unknown tag "@scope" used<br>
+<b>Warning on line 67</b> - Unknown tag "@transient" used<br>
+<a name="QueryResultInterface.php"></a>
+<h1>QueryResultInterface.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 33</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/QueryResultInterface.php<br>
+<b>Warning on line 34</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/nxsolrbackend/Classes/Persistence/QueryResultInterface.php<br>
+<a name="QuerySettingsInterface.php"></a>
+<h1>QuerySettingsInterface.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 34</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/QuerySettingsInterface.php<br>
+<a name="Range.php"></a>
+<h1>Range.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 34</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/nxsolrbackend/Classes/Persistence/QOM/Range.php<br>
+<a name="RangeInterface.php"></a>
+<h1>RangeInterface.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 34</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/nxsolrbackend/Classes/Persistence/QOM/RangeInterface.php<br>
+<a name="Repository.php"></a>
+<h1>Repository.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 35</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/Repository.php<br>
+<a name="RepositoryException.php"></a>
+<h1>RepositoryException.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 36</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/Exception/RepositoryException.php<br>
+<a name="RepositoryInterface.php"></a>
+<h1>RepositoryInterface.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 35</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/RepositoryInterface.php<br>
+<a name="Selector.php"></a>
+<h1>Selector.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 43</b> - Unknown tag "@scope" used<br>
+<b>Warning on line 43</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/QOM/Selector.php<br>
+<a name="SelectorInterface.php"></a>
+<h1>SelectorInterface.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 42</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/QOM/SelectorInterface.php<br>
+<a name="Session.php"></a>
+<h1>Session.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 31</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/Session.php<br>
+<a name="SolrBackend.php"></a>
+<h1>SolrBackend.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 32</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/nxsolrbackend/Classes/Persistence/Storage/SolrBackend.php<br>
+<a name="SolrBackendInterface.php"></a>
+<h1>SolrBackendInterface.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 32</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/nxsolrbackend/Classes/Persistence/Storage/SolrBackendInterface.php<br>
+<a name="SolrConnection.php"></a>
+<h1>SolrConnection.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 33</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/nxsolrbackend/Classes/Persistence/Storage/SolrConnection.php<br>
+<a name="SourceInterface.php"></a>
+<h1>SourceInterface.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 34</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/QOM/SourceInterface.php<br>
+<a name="SqlError.php"></a>
+<h1>SqlError.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 34</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/Storage/Exception/SqlError.php<br>
+<a name="Statement.php"></a>
+<h1>Statement.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 35</b> - Unknown tag "@scope" used<br>
+<b>Warning on line 35</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/QOM/Statement.php<br>
+<a name="StaticOperand.php"></a>
+<h1>StaticOperand.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 36</b> - Unknown tag "@scope" used<br>
+<b>Warning on line 36</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/QOM/StaticOperand.php<br>
+<a name="StaticOperandInterface.php"></a>
+<h1>StaticOperandInterface.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 35</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/QOM/StaticOperandInterface.php<br>
+<a name="TooDirty.php"></a>
+<h1>TooDirty.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 34</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/Exception/TooDirty.php<br>
+<a name="Typo3DbBackend.php"></a>
+<h1>Typo3DbBackend.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 34</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/Storage/Typo3DbBackend.php<br>
+<a name="Typo3QuerySettings.php"></a>
+<h1>Typo3QuerySettings.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 36</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/Typo3QuerySettings.php<br>
+<a name="UnexpectedTypeException.php"></a>
+<h1>UnexpectedTypeException.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 34</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/Exception/UnexpectedTypeException.php<br>
+<a name="UnimplementedFeature.php"></a>
+<h1>UnimplementedFeature.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 32</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/nxsolrbackend/Classes/Persistence/Storage/Exception/UnimplementedFeature.php<br>
+<a name="UnknownObject.php"></a>
+<h1>UnknownObject.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 34</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/Exception/UnknownObject.php<br>
+<a name="UnsupportedMethod.php"></a>
+<h1>UnsupportedMethod.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 34</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/Exception/UnsupportedMethod.php<br>
+<a name="UnsupportedOrder.php"></a>
+<h1>UnsupportedOrder.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 34</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/Exception/UnsupportedOrder.php<br>
+<a name="UnsupportedRelation.php"></a>
+<h1>UnsupportedRelation.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 34</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/Exception/UnsupportedRelation.php<br>
+<a name="UpperCase.php"></a>
+<h1>UpperCase.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 42</b> - Unknown tag "@scope" used<br>
+<b>Warning on line 42</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/QOM/UpperCase.php<br>
+<a name="UpperCaseInterface.php"></a>
+<h1>UpperCaseInterface.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 40</b> - no @package tag was used in a DocBlock for file /home/woitok/public_html/ibcshop/Html/typo3conf/ext/extbase/Classes/Persistence/QOM/UpperCaseInterface.php<br>
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 12 Jan 2011 14:39:30 +0100 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</body>
+</html>
